@@ -1,20 +1,46 @@
 {
-  "defaultSeverity": "warning",
+  "defaultSeverity": "error",
   "extends": [
-    "tslint:recommended"
+    "tslint:latest",
+    "tslint-config-prettier"
   ],
-  "linterOptions": {
-    "exclude": [
-      "node_modules/**"
-    ]
-  },
+  "jsRules": {},
+  "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
-    "quotemark": [true, "single"],
-    "indent": [true, "spaces", 2],
-    "interface-name": false,
-    "ordered-imports": false,
+    "prettier": [true, "configs"],
+    "arrow-parens": false,
+    "array-type": false,
+    "comment-format": [true, "check-space"],
+    "completed-docs": [true, "classes", "functions", "enums", "interfaces", "namespaces"],
+    "member-access": false,
+    "member-ordering": false,
+    "no-angle-bracket-type-assertion": false,
+    "no-console": false,
+    "no-shadowed-variable": false,
+    "no-string-literal": false,
+    "no-unused-expression": [true, "allow-fast-null-checks"],
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": false,
-    "semicolon": [true, "never"]
+    "object-literal-key-quotes": false,
+    "only-arrow-functions": false,
+    "ordered-imports": false,
+    "radix": false,
+    // "quotemark": [true, "single"],
+    // "semicolon": [true, "never"],
+    // "space-before-function-paren": true,
+    // "whitespace": [true, "check-module"],
+    "trailing-comma": false,
+    "variable-name": false,
+    "no-reference": false,
+    "no-var-requires": false,
+    "no-debugger": false,
+    "no-submodule-imports": [true, "vuex/dist/logger", "vconsole"],
+    "no-implicit-dependencies": [true, "dev"],
+    "prefer-object-spread": false,
+    "ban-types": [true, ["Object", "Use {} instead."], ["String"]],
+    "prefer-const": ["error", {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    }],
+    "prefer-conditional-expression": false
   }
 }
