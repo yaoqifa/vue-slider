@@ -1,8 +1,12 @@
 <template lang="pug">
   div#app
-    slider
-      helloWorld(msg="Welcome to Your Vue.js + TypeScript App")
-      page2
+    navigation(v-on:change-navigation="changeNavigation", :navigation="navigation")
+    slider(ref="slider",:default-index="defaultIndex",:slide-change-transition-end="slideChangeTransitionEnd")
+      helloWorld.slide-item(msg="Welcome to Your Vue.js + TypeScript App")
+      helloWorld.slide-item(msg="page2")
+      helloWorld.slide-item(msg="page3")
+      helloWorld.slide-item(msg="page4")
+
 </template>
 
 <script lang="ts" src="./App.ts"></script>
@@ -14,8 +18,11 @@
   -moz-osx-font-smoothing: grayscale
   text-align: center
   color: #2c3e50
-  margin-top: 60px
-
+.slide-item
+  position: relative
+  width: 100%
+  height: 100%
+  float: left
 p, h1, h2, h3, h4, h5, h6, dl
   margin: 0
 

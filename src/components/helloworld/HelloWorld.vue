@@ -10,4 +10,5 @@
   .hello
     h1
       font-size 16px
+      padding-top 50%
 </style>
