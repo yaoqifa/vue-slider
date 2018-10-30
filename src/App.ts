@@ -18,7 +18,7 @@ export default class App extends Vue {
   /**
    * 点击导航触发左右滑动
    *
-   * @param {*} type
+   * @param {*} index
    * @memberof App
    */
   changeNavigation(index: number) {

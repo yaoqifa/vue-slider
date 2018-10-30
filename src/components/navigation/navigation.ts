@@ -38,7 +38,7 @@ class Navigation extends Vue {
   /**
    * 点击导航
    *
-   * @param {any} type type
+   * @param {any} index index
    * @memberof Navigation
    */
   clickNavItem(index) {
